@@ -16,12 +16,12 @@
   <div class="starter-template">
     <div vlass="row">
       <div class="col-md-12">
+        {{outlet}}
         <ul>
           {{#each model as |task|}}
           <li>{{task.name}}{{task.description}}{{task.date}}</li>
           {{/each}}
         </ul>
-        {{outlet}}
       </div>
     </div>
   </div>
