@@ -19,7 +19,7 @@
         {{outlet}}
         {{#each model as |task|}}
         <div class="card mb-3  p-2">
-          <h5 class="card-title">{{task.name}}</h5>
+          <h5 class="card-title">{{#link-to 'tasks.edit' task.id}}{{task.name}}{{/link-to}}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{task.description}}</h6>
           <small>Due: {{formatDate task.date}}</small>
         </div>

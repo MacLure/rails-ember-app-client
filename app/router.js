@@ -1,5 +1,5 @@
-import EmberRouter from '@ember/routing/router';
-import config from './config/environment';
+import EmberRouter from "@ember/routing/router";
+import config from "./config/environment";
 
 const Router = EmberRouter.extend({
   location: config.locationType,
@@ -7,8 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('tasks', function() {
-    this.route('new');
+  this.route("tasks", function() {
+    this.route("new");
+    this.route("edit", { path: "/edit/:task_id" });
   });
 });
 
